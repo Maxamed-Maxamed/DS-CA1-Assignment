@@ -8,6 +8,8 @@ import { Construct } from "constructs";
 import { generateBatch } from "../shared/util";
 import { movies, movieCasts } from "../seed/movies";
 import * as apig from "aws-cdk-lib/aws-apigateway";
+import * as AWS from 'aws-sdk';
+
 
 export class RestAPIStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props?: cdk.StackProps) {
