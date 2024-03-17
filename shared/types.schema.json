@@ -109,6 +109,78 @@
                 "movieId"
             ],
             "type": "object"
+        },
+        "movieReviews": {
+            "additionalProperties": false,
+            "properties": {
+                "content": {
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[0-9]+$": {
+                            "type": "string"
+                        }
+                    },
+                    "properties": {
+                        "length": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "length"
+                    ],
+                    "type": "object"
+                },
+                "movieId": {
+                    "additionalProperties": false,
+                    "type": "object"
+                },
+                "rating": {
+                    "additionalProperties": false,
+                    "type": "object"
+                },
+                "reviewDate": {
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[0-9]+$": {
+                            "type": "string"
+                        }
+                    },
+                    "properties": {
+                        "length": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "length"
+                    ],
+                    "type": "object"
+                },
+                "reviewerName": {
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[0-9]+$": {
+                            "type": "string"
+                        }
+                    },
+                    "properties": {
+                        "length": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "length"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "content",
+                "movieId",
+                "rating",
+                "reviewDate",
+                "reviewerName"
+            ],
+            "type": "object"
         }
     }
 }
